@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    caption-side:     bottom;
+    border-collapse:  collapse;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    opacity: 0.8;
+}
+
+td, th {
+    padding:          5px;
+    /* text-align:       center; */
+}
+
+table {
+    margin: 0;
+    background-color:   #fafcff;
+    color:              #2a2a2a;
+}
+    
+td, th {
+    border: thin dotted gray;
+}
+
+a {
+    /* display: block; */
+    /* margin: 0 3%; */
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+label img {
+    cursor: pointer;
+}
+
+/* -----preloader----- */
+
+.preloader {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+
+.preloader.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preloader::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    left: 0;
+    height: 100%;
+    background: #5a8da2;
+    transition: 1s;
+    animation: fadeInLeft 0.3s;
+}
+
+.preloader::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    right: 0;
+    height: 100%;
+    background: #5a8da2;
+    transition: 1s;
+    animation: fadeInRight 0.3s;
+}
+
+.preloader-gear {
+    position: absolute;
+    z-index: 111;
+    animation: fadeInDownBig 1s;
+}
+
+.preloader-text {
+    font-size: 40px;
+    /* color: #959595; */
+    color: white;
+    font-weight: bold;
+    text-align: center;    
+}
+
+/* ---------- animation ------- */
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -2000px, 0);
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bg {
+    height: 100vh;
+    background: url(./img/background.png);
+    background-size: 107% 107%;
+}
+
+.welcome {
+    color: #fff;
+    font-size: 35px;
+}
+
+.main {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 40%;
+}
+
+.main_results {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.input-form {
+    background-color: #F1F3F4;
+    padding: 10px;
+    font-size: 22px;
+    border-radius: 22px;
+    border: none;
+    width: 90%;
+    display: block;
+    margin: 20px;
+    outline: none;
+}
+
+.search, .signin, .login {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 11px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(33, 32, 36, 0.86);
+}
+
+.avito-favicon {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;    
+}
+
+.avito-favicon.space-around {
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.avito-login {
+    display: flex;
+    justify-content: center;
+}
+
+.lable-login {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+.lable-login img {
+    margin: 15px;
+} 
+
+.avito-favicon img {
+    margin: 15px;
+}
+
+/*------------------------------ results ----------------------------------*/
+
+.results {
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-link {
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px 35px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.avito-favicon p {
+    width: 150px;
+    color: black;
+}
+
+
+
+/* ---------------------registration--------------------- */
+.registration {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+    color:#fff;
+}
+
+.div-buttons {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    width: 30%;
+}
+
+.div-buttons a {
+    margin: 0 5%;
+    width: 50%;
+}
+
+.authorization-button {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    margin: 0;
+}
+
+.authorization-button input {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 5% 20%;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(33, 32, 36, 0.86);
+}
+
+.authorization-button2 {
+    position: absolute;
+    top: 8%;
+    left: 3%;
+    margin: 0;
+}
+
+.authorization-button2 input {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 5% 20%;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(33, 32, 36, 0.86);
+}
+
+.input-hidden {
+    display: none;
+}
+
+.phone_input {
+    position: relative;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: linear-gradient(0deg, #fff, grey);
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 5px #fff, 
+    inset 0 0 10px rgba(0, 0, 0, .1), 0 5px 20px rgba(0,0,0,.1), 
+    inset 0 0 15px rgba(0, 0, 0, .1);
+}
+
+input:checked {
+    background: linear-gradient(0deg, #fff, #5a8da2);
+    box-shadow: 0 0 0 4px #fff, 0 0 0 5px #fff, 
+    inset 0 0 10px rgba(0, 0, 0, .1), 0 5px 20px rgba(0,0,0,.1), 
+    inset 0 0 15px rgba(0, 0, 0, .1);
+}
+
+.phone_input::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(0deg, #fff, #fff);
+    border-radius: 20px;
+    box-shadow: 0 0 0 1px #fff;
+    transform: scale(.98, .96);
+    transition: .5s;
+}
+
+input:checked::before {
+    left: 40px;
+}
+
+.phone_input::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 65px;
+    background: linear-gradient(0deg, #6b6b6b, #000);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+input:checked::after {
+    left: 105px;
+    background: #5a8da2;
+    box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
+    transition: .5s;
+}

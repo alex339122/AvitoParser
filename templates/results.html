@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="main_results">
+        <p> Поисковый запрос: {{ the_phrase }} </p>
+        <p> Город: {{ the_city }} </p>
+    <div class="results">        
+        <a href="{{ url_for('download_results', filename='results.csv') }}" class="avito-favicon">
+            <img src="../static/img/avito-icon.png" alt="avito-favicon">
+            <p class="results-link">Скачать результаты</p>
+        </a>
+        <a href="/viewresults" class="avito-favicon">
+            <img src="../static/img/avito-icon.png" alt="avito-favicon">
+            <p class="results-link">Смотреть результаты</p>
+        </a>
+        <a href="/" class="avito-favicon">
+            <img src="../static/img/avito-icon.png" alt="avito-favicon">
+            <p class="results-link">Новый запрос</p>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

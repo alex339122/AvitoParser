@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+
+<a href="/signin" {% if session['name'] %} class="authorization-button2 input-hidden" {% else %} class="authorization-button2" {% endif %}>
+    <input type="button" value="Зарегистрироваться">
+</a>
+<form action="/login_registration" method="POST">
+    <div class="main">
+        <h2 class="welcome">Введите логин и пароль</h2>
+        <input type="TEXT" name="login" placeholder="Login" class="input-form">
+        <input type="password" name="password" placeholder="Password" class="input-form">
+        <div class="avito-login">
+            <label for="pushme" class="lable-login">
+                <img src="../static/img/avito-icon.png" alt="avito-favicon">
+                <input type="SUBMIT" id="pushme" value="Login" class="login">
+            </label>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

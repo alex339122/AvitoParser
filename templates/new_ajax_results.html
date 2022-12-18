@@ -1,0 +1,18 @@
+{% for log_row in the_data %}
+    <tr>
+        {% set ns = namespace(range = 0)  %}
+        
+        {% for item in log_row %}                
+            {% if ns.range%6==0 %}
+                <td>
+                    <a href="{{ item }}" target="_blank">
+                        {{ item }}
+                    </a>
+                </td>
+            {% else %}
+                <td>{{ item }}</td>
+            {% endif %}
+            {% set ns.range = ns.range + 1 %}
+        {% endfor %}
+    </tr>
+{% endfor %}

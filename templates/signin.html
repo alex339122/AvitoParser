@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+
+<form action="/signin_registration" method="POST">
+    <div class="main">
+        <h2 class="welcome">Зарегистрируйтесь как <br> пользователь</h2>
+        <h3 class="welcome">{{the_text}}</h3>
+        <input type="text" name="login" placeholder="Login" class="input-form">
+        <input type="password" name="password" placeholder="Password" class="input-form">
+        <div class="avito-login">
+            <label for="signin" class="lable-login">
+                <img src="../static/img/avito-icon.png" alt="avito-favicon">
+                <input type="SUBMIT" id="signin" value="Sign in" class="signin">
+            </label>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
